@@ -1,0 +1,58 @@
+{
+  "version": 10,
+  "technical_points": 92,
+  "preference_bonuses": [
+    5,
+    3,
+    1
+  ],
+  "company_scale_bonuses": {
+    "대기업": 3,
+    "대기업·계열사·자회사": 3,
+    "대기업 계열사 자회사": 3,
+    "중견기업": 2,
+    "중소기업": 1
+  },
+  "unknown_company_bonus": 0,
+  "semantic_weight": 0.3,
+  "section_weights": {
+    "requirements": 2,
+    "preferences": 1
+  },
+  "bm25_weight": 0.1,
+  "importance_weights": {
+    "core": 0.5,
+    "auxiliary": 0.1,
+    "neutral": 0.3
+  },
+  "project_semantic": {
+    "section_weights": {
+      "responsibilities": 2,
+      "requirements": 2,
+      "preferences": 1
+    },
+    "similarity_floor": 0.4,
+    "similarity_ceiling": 0.85,
+    "duplicate_cosine": 0.98,
+    "explicit_evidence_weight": 0.25,
+    "evidence_budget": {
+      "slots": 6,
+      "semantic_weight": 0.2,
+      "explicit_weight": 0.8,
+      "similarity_floor": 0.4,
+      "similarity_full_credit": 0.5
+    }
+  },
+  "evidence_sufficiency_power": 1.0,
+  "calibration": {
+    "selection": "real_sbert_validated_original_weights",
+    "experiment": "evaluation/real_sbert/report.json",
+    "model_revision": "8fca7c9c98c26599be0e14b9916b11a756a26f19",
+    "validated_ndcg_at_5": 0.898419821895991,
+    "judgment_source": "AI_PROXY_POOLED_EVALUATION",
+    "numeric_weights_changed": false,
+    "applies_to": "previous_v7_policy_only",
+    "current_policy_validation": "real_sbert_completion_sensitivity_regression_not_ndcg_tuning"
+  },
+  "project_score_combination": "skill_baseline_plus_capped_project_evidence"
+}
